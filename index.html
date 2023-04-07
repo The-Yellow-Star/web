@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><title>Trang chủ </title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!-- Jquery-->
+    <script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+     <!--Link database-->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"/>
+     <link href="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.13.4/r-2.4.1/sl-1.6.2/datatables.min.css" rel="stylesheet"/>
+      
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+     <script src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.13.4/r-2.4.1/sl-1.6.2/datatables.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-t">
+         <h1>Lịch sử khám bệnh </h1>
+        </div>
+
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <img src="./images/logo.png">
+            <span> Bệnh Viện 108 </span>
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="#" target="_blank">
+              <span class="material-icons-outlined">home</span> Trang chủ 
+            </a>
+          </li>
+          
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="form">
+          <div class="nhap" >
+            <span>Ngày vào:</span>
+             <input type="date" class="form-control" id="start1" placeholder="Ngày vào" name="start">
+           </div>
+           <div class="nhap" >
+            <span>Ngày kết thúc:</span>
+             <input type="date" class="form-control" id="start2" placeholder="Ngày kế thúc " name="start">
+           </div>
+           <div class="nhap" >
+            <span>Số hồ sơ:</span>
+             <input type="text" class="form-control" id="start" placeholder="Số hồ sơ " name="start">
+           </div>
+           <div class="nhap" >
+            <span>Tên :</span>
+             <input type="text" class="form-control" id="myInput" placeholder="Tên bệnh nhân" name="start" >
+           </div>
+           <div class="tim" >
+            <button id="btns" class="btn btn-primary">Tìm kiếm </button>
+           </div>
+
+        </div>
+
+        <div class="lichsu">
+          <div class="list">     
+            <h1>Danh sách khám bệnh </h1>
+            <div id="Table" >
+            <table class="table table-fluid" id="myTable" >
+              <thead>
+                <tr>
+                  <th>Số phiếu</th>
+                  <th> Số hồ sơ </th>
+                  <th>Tên bệnh nhân</th>
+                  <th>Tuổi</th>
+                  <th>Giới tính</th>
+                  <th>Đối tượng</th>
+                  <th>Ngày vào </th>
+                  <th>Trạng thái </th>
+                  <th>Hướng điều trị</th>
+                  <th>Ngày kết thúc</th>
+                  
+                </tr>
+              </thead>
+    
+              <tbody>
+                <tr >
+                  <td  data-label="Số phiếu">1.10</td>
+                  <td data-label="Số hồ sơ"> 23470308</td>
+                  <td data-label="Tên bệnh nhân">Vương Thị Hòa</td>
+                  <td data-label="Tuổi">26</td>
+                  <td data-label="Giới tính">Nữ</td>
+                  <td data-label="Đối tượng">Dịch vụ</td>
+                  <td data-label="Ngày vào">24/02/2023 </td>
+                  <td data-label="Trạng thái">Đã kết thúc</td>
+                  <td data-label="Hướng điều trị">Cho đơn điều trị ngoài</td>
+                  <td data-label="Ngày kết thúc">24/03/2023</td>
+                  
+                </tr>
+                <tr>
+                  <td data-label="Số phiếu">1.20</td>
+                  <td data-label="Số hồ sơ">23470308</td>
+                  <td data-label="Tên bệnh nhân">Vương Thị Hòa</td>
+                  <td data-label="Tuổi">26</td>
+                  <td data-label="Giới tính">Nữ</td>
+                  <td data-label="Đối tượng">Dịch vụ </td>
+                  <td data-label="Ngày vào">25/04/2023 </td>
+                  <td data-label="Trạng thái">Đã kết thúc</td>
+                  <td data-label="Hướng điều trị">Cho đơn điều trị ngoài</td>
+                  <td data-label="Ngày kết thúc">24/06/2023</td>
+                </tr>
+                <tr>
+                  <td data-label="1">3.0</td>
+                  <td data-label="2">234747</td>
+                  <td data-label="3">Phạm Thị Hoa Chi</td>
+                  <td data-label="4">33</td>
+                  <td data-label="5">Nữ</td>
+                  <td data-label="6">BHYT</td>
+                  <td data-label="7">25/04/2023 </td>
+                  <td data-label="8">Đã khám</td>
+                  <td data-label="9"></td>
+                  <td data-label="0">24/06/2023</td>
+                </tr>
+                <tr>
+                  <td>4.04</td>
+                  <td>3768921</td>
+                  <td>Nguyễn Thị Lành</td>
+                  <td>44</td>
+                  <td>Nữ</td>
+                  <td>BHYT</td>
+                  <td>25/05/2023 </td>
+                  <td>Đã khám</td>
+                  <td>Cho đơn điều trị ngoài  </td>
+                  <td>17/06/2023</td>
+                </tr>
+                <tr>
+                  <td>5.09</td>
+                  <td>3768921</td>
+                  <td>Nguyễn Thị Lành</td>
+                  <td>44</td>
+                  <td>Nữ</td>
+                  <td>Dịch vụ</td>
+                  <td>25/05/2023 </td>
+                  <td>Đã khám</td>
+                  <td>Điều trị</td>
+                  <td>17/06/2023</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>23470308</td>
+                  <td>Vương Thị Hòa</td>
+                  <td>26</td>
+                  <td>Nữ</td>
+                  <td>Dịch vụ</td>
+                  <td>24/02/2023 </td>
+                  <td>Đã kết thúc</td>
+                  <td>Cho đơn điều trị ngoài</td>
+                  <td>24/03/2023</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>23470308</td>
+                  <td>Vương Thị Hòa</td>
+                  <td>26</td>
+                  <td>Nữ</td>
+                  <td></td>
+                  <td>25/04/2023 </td>
+                  <td>Đã kết thúc</td>
+                  <td>Cho đơn điều trị ngoài</td>
+                  <td>24/06/2023</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>234747</td>
+                  <td>Phạm Thị Hoa Chi</td>
+                  <td>33</td>
+                  <td>Nữ</td>
+                  <td>BHYT</td>
+                  <td>25/04/2023 </td>
+                  <td>Đã khám</td>
+                  <td></td>
+                  <td>24/06/2023</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>3768921</td>
+                  <td>Nguyễn Thị Lành</td>
+                  <td>44</td>
+                  <td>Nữ</td>
+                  <td>BHYT</td>
+                  <td>25/05/2023 </td>
+                  <td>Đã khám</td>
+                  <td>Cho đơn điều trị ngoài  </td>
+                  <td>17/06/2023</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>3768921</td>
+                  <td>Nguyễn Thị Lành</td>
+                  <td>44</td>
+                  <td>Nữ</td>
+                  <td>Dịch vụ</td>
+                  <td>25/05/2023 </td>
+                  <td>Đã khám</td>
+                  <td>Điều trị</td>
+                  <td>17/06/2023</td>
+                </tr>
+                <tr >
+                  <td data-label="Số phiếu">11</td>
+                  <td data-label="Số hồ sơ"> 23470308</td>
+                  <td data-label="Tên bệnh nhân">Vương Thị Hòa</td>
+                  <td data-label="Tuổi">26</td>
+                  <td data-label="Giới tính">Nữ</td>
+                  <td data-label="Đối tượng">Dịch vụ</td>
+                  <td data-label="Ngày vào">24/02/2023 </td>
+                  <td data-label="Trạng thái">Đã kết thúc</td>
+                  <td data-label="Hướng điều trị">Cho đơn điều trị ngoài</td>
+                  <td data-label="Ngày kết thúc">24/03/2023</td>
+                </tr>
+                <tr >
+                  <td data-label="Số phiếu">12</td>
+                  <td data-label="Số hồ sơ"> 23470308</td>
+                  <td data-label="Tên bệnh nhân">Vương Thị Hòa</td>
+                  <td data-label="Tuổi">26</td>
+                  <td data-label="Giới tính">Nữ</td>
+                  <td data-label="Đối tượng">Dịch vụ</td>
+                  <td data-label="Ngày vào">24/02/2023 </td>
+                  <td data-label="Trạng thái">Đã kết thúc</td>
+                  <td data-label="Hướng điều trị">Cho đơn điều trị ngoài</td>
+                  <td data-label="Ngày kết thúc">24/03/2023</td>
+                </tr>
+                <tr >
+                  <td data-label="Số phiếu">13</td>
+                  <td data-label="Số hồ sơ"> 23470308</td>
+                  <td data-label="Tên bệnh nhân">Vương Thị Hòa</td>
+                  <td data-label="Tuổi">26</td>
+                  <td data-label="Giới tính">Nữ</td>
+                  <td data-label="Đối tượng">Dịch vụ</td>
+                  <td data-label="Ngày vào">24/02/2023 </td>
+                  <td data-label="Trạng thái">Đã kết thúc</td>
+                  <td data-label="Hướng điều trị">Cho đơn điều trị ngoài</td>
+                  <td data-label="Ngày kết thúc">24/03/2023</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- <ul class="listPage">
+             
+          </ul> -->
+        </div>
+        </div>
+ 
+
+        
+      </main>
+      <!-- End Main -->
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
